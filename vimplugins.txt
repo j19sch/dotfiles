@@ -1,6 +1,0 @@
-[0m[01;34mctrlp.vim/[0m/
-[01;34mnerdtree/[0m/
-[01;34mvim-airline-themes/[0m/
-[01;34mvim-airline/[0m/
-[01;34mvim-colors-solarized/[0m/
-[01;34mvim-monokai/[0m/

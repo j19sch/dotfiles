@@ -1,18 +1,99 @@
-execute pathogen#infect()
+"no compatibility better safe than sorry
+set nocompatible
+
+" Disable Insert, Replace or Visual mode message on the last line
+set noshowmode
+
+" syntax highlighting
 syntax enable
-set background=dark
-colorscheme solarized
-" colorscheme monokai
+
+" show incomplete commands while typing
+set showcmd
+
+" sl: always show
 set laststatus=2
-let g:airline_theme="luna"
+
+" sl: first line
+set statusline=
+" sl: path to file
+set statusline+=%f
+" sl: modified flag
+set statusline+=%m
+" sl: read-only flag
+set statusline+=%r
+" sl: file type
+set statusline+=%y
+" sl: switch to right side
+set statusline+=%=
+"cursor column
+set statusline+=%c,
+" sl: current line; separator; total line
+set statusline+=%l/%L
+" percentage through file
+set statusline+=\ %P
+
 set number
-set numberwidth=3
+set numberwidth=4
+" autocmd InsertLeave * :set relativenumber!
+" autocmd InsertEnter * :set relativenumber
 
-set wrap
-set linebreak
-set nolist
-set textwidth=0
-set wrapmargin=0
+" python
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
-autocmd InsertLeave * :set relativenumber!
-autocmd InsertEnter * :set relativenumber
+" plugins
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'dir': '~/.vim/plugged/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'  " Files Colors
+Plug 'itchyny/lightline.vim'  " Statusbar
+Plug 'tpope/vim-fugitive'  " Git wrapper
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " File system explorer
+"Plug 'jmcantrell/vim-virtualenv'  " :VirtualEnvList :VirtualEnvActivate :VirtualEnvDeactivate
+Plug 'hdima/python-syntax'  " Python syntax highlighting
+Plug 'nvie/vim-flake8'  " F7 to flake8
+Plug 'davidhalter/jedi-vim', { 'for':  'python' }  " ctrl+space, \g, \d, \n, K, \r
+Plug 'mhinz/vim-startify'  " fancy start screen
+Plug 'airblade/vim-gitgutter'  " sign column to show changes
+Plug 'yggdroot/indentline'  " Show indentation
+Plug 'tpope/vim-surround'  " cs({ ds{ yss}
+Plug 'tpope/vim-repeat'  " . repeats plugin map as a whole
+Plug 'tpope/vim-commentary'  " gcc gc[motion] VIS gc
+Plug 'easymotion/vim-easymotion'  " \\[motion]
+
+" colorschemes
+" Plug 'ericbn/vim-solarized' |  Plug 'altercation/vim-colors-solarized'
+Plug 'andreasvc/vim-256noir'
+Plug 'morhetz/gruvbox'|  Plug 'nlknguyen/papercolor-theme'
+Plug 'tomasr/molokai' | Plug 'sickill/vim-monokai'
+Plug 'dikiaap/minimalist'
+Plug 'nanotech/jellybeans.vim'
+
+call plug#end()
+
+"Plugin shortcuts
+map <C-n> :NERDTreeToggle<CR>
+
+" Plugin config
+let g:python_highlight_all = 1
+
+let g:gitgutter_terminal_reports_focus=0
+
+let g:lightline = {
+      \ 'colorscheme': 'default',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'helloworld' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component': {
+      \   'virtenv':  'virtualenv#statusline'
+      \ },
+      \ }
+
+" Color settings
+set background=dark
+colorscheme minimalist
+

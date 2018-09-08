@@ -33,7 +33,7 @@ set statusline+=%l/%L
 set statusline+=\ %P
 
 set number
-set numberwidth=4
+set numberwidth=3
 " autocmd InsertLeave * :set relativenumber!
 " autocmd InsertEnter * :set relativenumber
 
@@ -68,6 +68,10 @@ Plug 'morhetz/gruvbox'|  Plug 'nlknguyen/papercolor-theme'
 Plug 'tomasr/molokai' | Plug 'sickill/vim-monokai'
 Plug 'dikiaap/minimalist'
 Plug 'nanotech/jellybeans.vim'
+Plug 'drewtempelmeyer/palenight.vim'  " lightline support
+Plug 'ayu-theme/ayu-vim'  " in dev, requires termguicolors
+" Plug 'mhartington/oceanic-next'  " needs config
+
 
 call plug#end()
 

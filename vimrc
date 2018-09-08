@@ -97,6 +97,17 @@ let g:lightline = {
       \ },
       \ }
 
+if exists('&signcolumn')  " Vim 7.4.2201
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
+
+set updatetime=800
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = "2"
+
 " Color settings
 set background=dark
 colorscheme minimalist

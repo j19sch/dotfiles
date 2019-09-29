@@ -20,3 +20,5 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+IBUS_ENABLE_SYNC_MODE=1

@@ -103,6 +103,10 @@ alias rasptor='ssh pi@192.168.178.21'
 # activate python virtual environment
 alias pyv='source ./venv/bin/activate'
 
+# py3 aliases
+alias py3black='python3 -m black'
+alias py3flake8='python3 -m flake8'
+
 # add ~/bin to path
 PATH=$PATH:~/bin
 export PATH

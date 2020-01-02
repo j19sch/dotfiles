@@ -31,6 +31,9 @@ bindsym $mod+n mode "(r)estart s(h)utdown"
 for_window [class="scratchpad"] move to scratchpad
 exec gnome-terminal --hide-menubar --name=scratchpad
 
+# Pycharm floating splash window
+for_window [class="jetbrains-.*" title="win0"] floating enable border none
+
 # set workspace names
 set $ws1 1 
 set $ws2 2

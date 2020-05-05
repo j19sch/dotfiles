@@ -94,8 +94,6 @@ Plug 'itchyny/lightline.vim'  " statusbar
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }  " File system explorer
 Plug 'tpope/vim-commentary'  " easy (un)commenting gcc gc[motion] [count]gcc
 Plug 'tpope/vim-fugitive'  " git wrapper
-Plug 'tpope/vim-repeat'  " . repeats plugin map as a whole instead of only last native command in map
-Plug 'vim-scripts/CSApprox'  " makes GVim-only colorschemes Just Work in terminal Vim
 Plug 'yggdroot/indentline'  " show indentation
 
 " General disabled until needed
@@ -103,6 +101,8 @@ Plug 'yggdroot/indentline'  " show indentation
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " fzf fuzzy finder
 " Plug 'junegunn/fzf.vim'  " fzf-based commands and mappings
 " Plug 'kien/rainbow_parentheses.vim'  " Better Rainbow Parentheses
+" Plug 'tpope/vim-repeat'  " . repeats plugin map as a whole instead of only last native command in map
+" Plug 'vim-scripts/CSApprox'  " makes GVim-only colorschemes Just Work in terminal Vim
 
 " Clojure
 Plug 'guns/vim-sexp'  " precision editing for S-expressions

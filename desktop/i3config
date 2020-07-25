@@ -65,6 +65,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2%
 
+# mouse buttons workspace prev/next
+bindsym --whole-window button8 workspace prev
+bindsym --whole-window button9 workspace next
+
 # workspace assignments
 assign [class="^Steam"] $ws5
 

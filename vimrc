@@ -24,7 +24,7 @@ set nofoldenable  " Disable folding by default.
 set scrolloff=5  " Always display n lines above and below cursor
 set display+=lastline  " always try to show a paragraph’s last line.
 
-set cursorline  " Highlight line with cursor
+" set cursorline  " Highlight line with cursor, off because performance
 set showmatch  " Show matching brackets.
 
 set showcmd  " Show (partial) command in status line.
@@ -118,6 +118,7 @@ Plug 'tpope/vim-fireplace'  " REPL plugin
 
 " colorschemes
 Plug 'dikiaap/minimalist'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " RainbowParentheses always on
@@ -154,5 +155,6 @@ set updatetime=300  " default 4000, idle milliseconds before writing to swap fil
 
 " Color settings
 """"""""""""""""
-colorscheme minimalist
+let g:gruvbox_italic = '1'
+colorscheme gruvbox
 set background=dark  " dark for dark colorschemes, light for light ones
